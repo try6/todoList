@@ -1,6 +1,6 @@
 <template>
   <div class="item-helper">
-      <span class="left">2 items lefter</span>
+      <span class="left">{{unCompletedLength}} items lefter</span>
         <span class="tabs">
             <span 
             v-for="state in status"
@@ -16,17 +16,34 @@
     export default{
         props:{
             filter:{
-                requried:true,
-                type:String
+                type:String,
+                requried:true
+            },
+            todos:{
+                type:Array,
+                requried:true
             }
         },
         data(){
             return {
-                status:['all','active','compeleted']
+                status:['all','active','completed'],
+                
+            }
+        },
+        computed:{
+            unCompletedLength(){
+                let unCompleted = this.todos.filter((todo)=>{
+                   if(!todo.completed){
+                       return todo;
+                   }
+                });
+                return unCompleted.length
             }
         },
         methods:{
-            toggerFliter(state){},
+            toggerFliter(state){
+                this.$emit('tagger',state)
+            },
             deleteItem(){}
         }
     }
