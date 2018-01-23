@@ -1,7 +1,7 @@
 <template>
   <div class="item-helper">
-      <span class="left">{{unCompletedLength}} items lefter</span>
-        <span class="tabs">
+      <span class="left"><i>{{unCompletedLength}}</i> items left</span>
+        <span class="tabs right">
             <span 
             v-for="state in status"
             :key="state"
@@ -9,7 +9,6 @@
             @click="toggerFliter(state)"
             >{{state}}</span>
         </span>
-        <span @click="deleteItem"></span>
   </div>
 </template>
 <script>
@@ -49,14 +48,36 @@
     }
 </script>
 <style scoped>
+
+.item-helper{
+    position: absolute;
+    bottom: 40px;
+    left:0;
+    right: 0;margin:10px auto;
+    font-size: 16px;
+}
+
 .item-helper span{
-    padding: 5px;
-    display: inline-block;
+    padding: 6px;
+    margin:0 5px;
+    
+}
+.item-helper > span{
+    
+ margin:0 30px;
+
+}
+.left{
+    color:#666;
+}
+.left i {
+    color:#dc8c8c;
 }
 .state{
     cursor: pointer;
 }
 .active{
-    border: 1px solid #ddd;
+    border: 1px solid #dc8c8c;
+    border-radius: 8px;
 }
 </style>

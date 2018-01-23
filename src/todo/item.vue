@@ -6,7 +6,7 @@
       v-model="todo.completed"
       >
       <label >{{todo.content}}</label>
-      <button class="destroy"@click="destroyItem">x</button>
+      <button class="destroy" @click="destroyItem">x</button>
 
   </div>
 </template>
@@ -33,11 +33,36 @@
     }
 </script>
 <style scoped>
+
 .todo-item{
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    width:80%;
+    margin:20px auto;
 }
 .completed label{
-    color:#ddd
+    color:#ddd;
+    text-decoration:line-through;
+}
+.item{
+    margin-right:30px;
+}
+.destroy{
+    float:right;
+    border:1px solid #ddd;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    line-height: 20px;
+    cursor: pointer;
+    color:#666;
+    background-color:transparent;
+}
+.destroy:hover{
+    
+background-color:#ddd;
+
 }
 </style>

@@ -65,3 +65,19 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.todo section{
+  min-height: 100px;
+  margin-bottom: 70px;
+}
+.todoList {
+  padding: 8px;
+  border-radius: 8px;
+  width: 300px;
+  display: inline-block;
+  height: 20px;
+  border:1px solid #ddd;
+}
+
+</style>

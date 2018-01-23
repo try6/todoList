@@ -1,14 +1,17 @@
 <template>
   <div class="footer">
-      <div>made by try</div>
+      <div>@Made By Try &nbsp; 2018-01-23</div>
   </div>
 </template>
 <style scoped>
-.footer{
-    margin:20 auto;
-    height:30px;
-    line-height: 30px;
-    color:#666;
-}
+    .footer{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        font-size: 12px;
+        color:#adadad;
+        margin:10px auto;
+    }
 </style>
 
