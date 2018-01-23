@@ -43,7 +43,7 @@
     margin:20px auto;
 }
 .completed label{
-    color:#ddd;
+    color:#999;
     text-decoration:line-through;
 }
 .item{
