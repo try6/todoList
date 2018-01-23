@@ -1,26 +1,11 @@
 <template>
   <div class="todo">
-      <section>
-         <input type="text"
-               
-                class="todoList"
-                placeholder="接下去要做什么"
-                autofocus="autofocus"
-                @keyup.enter ="addList"
-          >
-          <item 
-          :todo="todo"
-            v-for="todo in filterTodo"
-            :key="todo.id"
-            @del="delItem"
-          />
-          <Itabs 
-          :filter = "filter"
-          :todos ="todos"
-          @tagger="changeState"
-          ></Itabs>
-      </section>
-    
+    <section>
+      <input type="text" class="todoList" placeholder="接下去要做什么" autofocus="autofocus" @keyup.enter="addList">
+      <item :todo="todo" v-for="todo in filterTodo" :key="todo.id" @del="delItem" />
+      <Itabs :filter="filter" :todos="todos" @tagger="changeState"></Itabs>
+    </section>
+
   </div>
 </template>
 <script>
@@ -43,11 +28,22 @@ export default {
       if (this.filter == "all") {
         return this.todos;
       }
-      const completed = this.filter === "completed";
-      if (completed) {
-        return this.todos.filter((todo) => {
-          todo.completed = completed;
+      {
+        const completed = this.filter === "completed";
+        let newArray = this.todos.filter((todo) => {
+          if (todo.completed == completed) {
+            return true;
+          };
         });
+        return newArray;
+      } {
+        const active = this.filter === "active";
+        let newArray = this.todos.filter((todo) => {
+          if (todo.completed == active) {
+            return true;
+          };
+        });
+        return newArray;
       }
     }
   },
