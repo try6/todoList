@@ -1,30 +1,13 @@
-# my-project
+# Todo_List
 
 > A Vue.js project
 
-## Build Setup
+> 基于vue-cli脚手架
 
-``` bash
-# install dependencies
-npm install
+## 效果图
 
-# serve with hot reload at localhost:8080
-npm run dev
+![TODOList](http://upload-images.jianshu.io/upload_images/2865721-9e2ff852685f41f8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-# build for production with minification
-npm run build
+## GIF演示（文件较大，请耐心等待）
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![todoList.gif](http://upload-images.jianshu.io/upload_images/2865721-830512ef9b245c7d.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
